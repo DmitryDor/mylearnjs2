@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<p>Enter the number: <input type="text" id="mynum"></p>
+<button onclick="f1()">Guess</button>
+<hr>
+<p id="out"></p>
+<p id="temp-out"></p>
+
+<script>
+    let prNum, tempOut;
+    prNum = Math.floor((Math.random() * 10)+1);  // генерирует число между 0 и 10
+    /*tempOut = document.getElementById('temp-out');
+    tempOut.innerHTML = prNum;*/ // Эта часть кода выводила загаданное программой число на экран
+console.log(prNum); //выведим загаданное число в консоле
+    function f1() {
+        let num, out;
+
+
+        num = document.getElementById('mynum').value;
+        out = document.getElementById('out');
+
+        if (num==prNum) {
+            out.innerHTML = 'Super';
+        } else if (num>prNum) {
+            out.innerHTML = 'The number is big';
+        } else {
+            out.innerHTML = 'The number is little';
+        }
+    }
+
+</script>
+</body>
+</html>

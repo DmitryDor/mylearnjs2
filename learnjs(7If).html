@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<p>Enter the number: <input type="text" id="num1"></p>
+<button onclick="f1()">Find out  </button>
+<hr>
+<p id="out"></p>
+<script>
+    function f1() {
+        let n,p;
+        p=document.getElementById('out')
+        n=document.getElementById('num1').value;
+        n=parseInt(n);
+        if (n===100) {
+            p.innerHTML = 'Number = 100';
+        } else if (n<100) {
+            p.innerHTML = 'Number < 100';
+        } else {
+            p.innerHTML = 'Number > 100';
+        }
+
+    }
+
+</script>
+</body>
+</html>

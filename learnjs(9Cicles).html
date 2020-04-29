@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<button onclick="f1()">Click</button>
+<p id="out"></p>
+
+<script>
+function f1() {
+    let p;
+    p = document.getElementById('out');
+    //цикл с заданным количеством повторений
+    for (let i=0; i<=1000; i=i+5){
+        p.innerHTML += i + ' ';
+    }
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<button onclick="f1()">Click</button>
+<p id="out"></p>
+<p id="out1"></p>
+
+<script>
+    function f1() {
+        let p;
+        p = document.getElementById('out');
+        p1 = document.getElementById('out1');
+
+      let i=0;
+      //цикл с предусловием
+      while (i<50) {
+          p.innerHTML += i + ' ';
+          i++;
+      }
+      let j=100;
+      //цикл с постусловием (тело цикла гарантированно сработает минимум один раз)
+      do {
+          p1.innerHTML +=j +' ';
+          j--;
+      }
+      while (j>0);
+        }
+
+
+</script>
+</body>
+</html>

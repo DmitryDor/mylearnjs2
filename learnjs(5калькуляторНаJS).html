@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<p>Number1: <input type="text" id="n1"></p>
+<p>Number2: <input type="text" id="n2"></p>
+<button onclick="plus()">Addition</button>
+<button onclick="minus()">Subtraction</button>
+<hr>
+<p id="out"> Result: </p>
+
+
+<script>
+   function plus() {
+let num1,num2,res;
+num1=document.getElementById('n1').value;
+num1 = parseInt(num1);// parseInt- функция, преобразовывает по возможности данные до числа(5а -станет 5);
+       num2=document.getElementById('n2').value;
+       num2 = parseInt(num2);
+       res = num1+num2;
+       document.getElementById('out').innerHTML = res;
+   }
+   function minus() {
+       let num3,num4,res;
+       num3=document.getElementById('n1').value;
+       num3 = parseInt(num3);// parseInt- функция, преобразовывает по возможности данные до числа(5а -станет 5);
+       num4=document.getElementById('n2').value;
+       num4 = parseInt(num4);
+       res = num3-num4;
+       document.getElementById('out').innerHTML = res;
+
+   }
+
+
+</script>
+</body>
+</html>

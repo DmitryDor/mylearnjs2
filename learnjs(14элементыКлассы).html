@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<p>Item 1</p>
+<p class="one">Item 2 .one</p>
+<p>Item 3</p>
+<p>Item 4</p>
+<p>Item 5</p>
+<p class="one">Class.one</p>
+
+<script>
+let p = document.getElementsByTagName('p');
+var one = document.getElementsByClassName('one');
+console.log(p);
+for (let i=0; i<p.length; i++) {
+
+    p[i].onclick = f1;
+}
+for (let i=0; i<one.length; i++) {
+
+    one[i].onclick = f2;
+}
+
+function f1() {
+    //alert('hello');
+    console.log(this);
+    this.style.background = 'yellow';
+}
+ function f2() {
+    this.style.fontWeight = 'bold';
+
+ }
+</script>
+</body>
+</html>

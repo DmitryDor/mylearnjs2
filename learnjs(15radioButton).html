@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<p><input type="radio" name="prim" value="apple">Apple</p>
+<!чтобы в браузере выбирать только один элемент-нужнло им дать одинаковое имя>
+<! checked - делает атрибут активным изначально>
+<p><input type="radio" name="prim" value="pears">Pears</p>
+<p><input type="radio" name="prim" value="pinapple">Pin-apple</p>
+<button id="one">Click here</button>
+
+
+<script>
+let radio= document.getElementsByName('prim');
+
+for (let i=0 ; i< radio.length; i ++) {
+    radio[i].onchange = testRadio;
+}
+function testRadio() {
+    console.log(this.value);
+}
+
+document.getElementById('one').onclick = checkRadio;
+function checkRadio() {
+    let m = document.getElementsByName('prim');
+    for (let i=0; i<m.length; i++) {
+        if (m[i].checked) {
+            alert(m[i].value);
+            break;
+        }
+    }
+
+}
+</script>
+</body>
+</html>

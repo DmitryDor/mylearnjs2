@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<p id="out"></p>
+<script>
+ let n={
+     "one": 12,
+     "hello": "world",
+     "prim": 2000,
+     "double key": 777
+ };
+ //способы обращения к обекту
+ //console.log(n["one"]);
+ //console.log(n.prim);
+ //console.log(n.double key); выдаст ошибку из-за пробела,нужно обращаться через []
+ //console.log(n["double key"]);
+ let ppp="hello";
+ console.log(n[ppp]); //обращение через переменную
+ let out=document.getElementById('out');
+   for (let key in n) {
+       out.innerHTML += key  + ' --- '+n[key] +'<br> ';// Этот вариант для вывода на экран
+      // console.log(key); // этот вариант для вывода в консоль(убрав строку 28 и 26)
+   }
+
+</script>
+</body>
+</html>
